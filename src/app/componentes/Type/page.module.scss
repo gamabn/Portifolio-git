@@ -1,0 +1,45 @@
+
+@media screen and (min-width: 320px){
+    .type{
+        display: flex;
+        justify-content:flex-start;
+        align-items:flex-start;
+    
+        span{
+            color:var(--now-700);
+            font-size: 1.0rem;
+            font-weight: bolder;
+            padding: 10px;
+        }
+    }
+}
+@media screen and (min-width: 620px){
+    .type{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        span{
+            color:var(--now-700);
+            font-size: 1.5rem;
+            font-weight: bolder;
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 820px){}
+@media screen and (min-width: 1200px){
+
+    .type{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    
+        span{
+            color:var(--now-700);
+            font-size: 1.7rem;
+            font-weight: bolder;
+        }
+    } 
+}
