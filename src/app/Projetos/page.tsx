@@ -44,7 +44,7 @@ async function getData() {
       name: name
     };
   });
-    console.log('A',filenames)
+   
   
     return (
       <main className={styles.container}>
