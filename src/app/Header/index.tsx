@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export function Header() {
     const [top,setTop] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
     const scrolHandler = (()=>{
         window.scrollY > 10 ? setTop(false) : setTop(true)
     })
@@ -17,27 +18,60 @@ export function Header() {
 
         return ()=> window.removeEventListener('scroll', scrolHandler)
 
-    },[])
+    },[]);
+
+   // const toggleMenu = () => {
+       // setMenuOpen((prev) => !prev);
+     // };
+     function toggleMenu(){
+      setMenuOpen((prev)=> !prev)
+     }
 
     return (
-        <header className={`${styles.header} ${top ? styles.background : styles.fixed}`}>
-            <section className={styles.content}>
-                <nav className={styles.nav}>
-                   <ul>
-                    <li>
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link href="/Sobre">Sobre</Link>
-                    </li>
-                    <li>
-                        <Link href="/Projetos">Projetos</Link>
-                    </li>
-                  
-                   
-                   </ul>
-                </nav>
-            </section>
-        </header>
+        <>
+      <header className={`${styles.header} ${top ? styles.background : styles.fixed}`}>
+        <section className={styles.content}>
+          <button onClick={toggleMenu} className={styles.menuButton}>
+            ☰
+          </button>
+          <nav>
+            <ul>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/Sobre">Sobre</Link>
+              </li>
+              <li>
+                <Link href="/Projetos">Projetos</Link>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </header>
+
+      {/* Menu Lateral */}
+      <aside className={`${styles.sidebar} ${menuOpen ? styles.open : ""}`}>
+        <nav onClick={toggleMenu}>
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/Sobre">Sobre</Link>
+            </li>
+            <li>
+              <Link href="/Projetos">Projetos</Link>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      {/* Background overlay quando o menu está aberto */}
+      {menuOpen && (
+        <div className={styles.overlay} onClick={toggleMenu}></div>
+      )}
+    </>
+        
     )
 }
