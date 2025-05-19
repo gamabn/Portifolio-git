@@ -50,7 +50,7 @@
               alt={image.alt}
               width={1000}
               height={350}
-              objectFit="cover"
+              style={{ objectFit: 'cover' }}
              
             />
           </SwiperSlide>
