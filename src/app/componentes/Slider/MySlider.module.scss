@@ -1,0 +1,26 @@
+
+  
+   .Container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+
+ .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+}

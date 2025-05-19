@@ -22,7 +22,7 @@ async function getData() {
   }
 
   import styles from './page.module.scss'
-  import Image from 'next/image';
+ 
   import fs from 'fs';
   import path from 'path';
   
@@ -31,7 +31,7 @@ async function getData() {
   
   
     const data: HomeProps[] = await getData();
-    console.log(data)
+    
    
     const imagesDirectory = path.join(process.cwd(), 'public/assets')
 
@@ -59,21 +59,23 @@ async function getData() {
             <p>{item.name}</p>
             <div className={styles.imageList}>
             <img src={item.owner.avatar_url} alt="imagem github"/>
-            <a href={item.html_url}> <span>{item.owner.url}</span></a>
+            <a href={item.html_url}>
+               <span>{item.owner.url}</span>
+             </a>
             </div>
            
            
   
            
 
-            {images.map((image, index) => (
-        <div key={index} className={styles.imageContainer}>
-         
-         {image.name === item.name &&
-        
-          <img  src={image.src} alt={`Imagem ${image.name}`} /> }
-          
-         </div>
+         {images.map((image, index) => (
+              <div key={index} className={styles.imageContainer}>
+                  
+                  {image.name === item.name &&
+                  
+                    <img  src={image.src} alt={`Imagem ${image.name}`} /> }
+                
+              </div>
          
       ))}
 

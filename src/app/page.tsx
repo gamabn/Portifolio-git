@@ -3,7 +3,8 @@ import about from "../../public/assets/tecnologias.jpg";
 import Type from "./componentes/Type";
 import you from "../../public/assets/portifolio.jpg";
 import styles from "./page.module.scss";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import MySlider from "./componentes/Slider";
 
 export default function Home() {
   return (
@@ -47,6 +48,9 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      <div>
+          <MySlider /> 
+      </div>
     
     </div>
   );
