@@ -13,6 +13,10 @@ const inter = Inter({ subsets: ["latin"] });
 // ou usar a URL diretamente se ela for estática.
 // const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://portifolio-git.vercel.app';
 
+
+// Teste para commit - 12345
+
+
 export const metadata: Metadata = {
   // metadataBase é crucial para resolver URLs relativas de imagens e outros assets.
   metadataBase: new URL('https://portifolio-git.vercel.app'), // Teste hardcodando a URL
