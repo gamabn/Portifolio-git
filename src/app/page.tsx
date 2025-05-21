@@ -1,7 +1,5 @@
 import Image from "next/image";
-import about from "../../public/assets/tecnologias.jpg";
 import Type from "./componentes/Type";
-import you from "../../public/assets/portifolio.jpg";
 import styles from "./page.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MySlider from "./componentes/Slider";
@@ -19,8 +17,8 @@ export default function Home() {
         </div>
         <div className={styles.ContainerImg}>
         <Image
-          className={styles.image}
-          src={you}
+          className={styles.image} 
+          src="/assets/portifolio.jpg" // Caminho relativo à pasta public
           width={350}
           height={350}
           alt="Picture of the author"

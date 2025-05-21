@@ -42,7 +42,12 @@ export const metadata: Metadata = {
     title: "Portifolio de Flavio Gama",
     description: "Descubra os projetos e habilidades de Flavio Gama, Desenvolvedor Full Stack.",
     // creator: '@seuUsuarioTwitter', // Opcional: seu usuário no Twitter
-    images: [`${siteUrl}/twitter-image.png`], // Exemplo: /public/twitter-image.png
+        // Com metadataBase definido, você pode usar caminhos relativos aqui também.
+        // Certifique-se de ter uma imagem em /public/twitter-image.png (ou o nome que preferir)
+        images: [
+          // Usando um objeto para consistência e para adicionar 'alt' text
+          { url: '/twitter-image.png', alt: 'Preview do Portfólio de Flavio Gama para Twitter' }
+        ],
   },
   robots: {
     index: true,
