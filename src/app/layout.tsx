@@ -11,18 +11,18 @@ const inter = Inter({ subsets: ["latin"] });
 // A Vercel indicou "https://portifolio-git.vercel.app" no erro anterior.
 // Você pode usar uma variável de ambiente (ex: NEXT_PUBLIC_SITE_URL) configurada na Vercel,
 // ou usar a URL diretamente se ela for estática.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://portifolio-git.vercel.app';
+// const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://portifolio-git.vercel.app';
 
 export const metadata: Metadata = {
   // metadataBase é crucial para resolver URLs relativas de imagens e outros assets.
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL('https://portifolio-git.vercel.app'), // Teste hardcodando a URL
   title: "Portifolio de Flavio Gama",
   description: "Site de portifolio em que os projetos veem direto da api do github",
   keywords: ['programaçao', 'portifolio', 'next', 'react'],
   openGraph: {
     title: "Portifolio de Flavio Gama", // Título específico para Open Graph
     description: "Descubra os projetos e habilidades de Flavio Gama, Desenvolvedor Full Stack.", // Descrição para Open Graph
-    url: siteUrl, // A URL canônica da página principal
+    url: 'https://portifolio-git.vercel.app', // A URL canônica da página principal
     siteName: "Portfólio Flavio Gama",
     // As imagens devem ser caminhos relativos à pasta 'public'.
     // Certifique-se de ter uma imagem em /public/og-image.png (ou o nome que preferir)
